@@ -8,7 +8,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # 允许写仓库
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
