@@ -1,0 +1,24 @@
+name: init-flake-lock
+on:
+  workflow_dispatch:
+  push:
+    paths: ['flake.nix']
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # 允许写仓库
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - name: generate flake.lock
+        run: |
+          nix flake update --experimental-features 'nix-command flakes'
+      - name: commit lock file
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add flake.lock
+          git diff --cached --quiet || git commit -m "chore: init flake.lock"
+          git push

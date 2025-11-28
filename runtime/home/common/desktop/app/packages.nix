@@ -1,0 +1,33 @@
+{ pkgs, inputs, ... }:
+{
+  home.packages = with pkgs; [
+    fd
+    swww
+    zotero
+    killall
+    xwayland-satellite
+    wlsunset
+    waycorner
+    pandoc
+    killall
+    gimp3
+    kdePackages.kdenlive
+    appimage-run
+    yad
+    jq
+    wayneko
+    brightnessctl
+    wmname
+    direnv
+    entr
+    imagemagick
+    ffmpeg
+    ffmpegthumbnailer
+    poppler
+    ueberzugpp
+    nix-init
+    wl-color-picker
+    git-ignore
+    wechat
+  ];
+}

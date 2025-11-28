@@ -1,0 +1,16 @@
+{
+  "catppuccin-icons.associations.folders": {
+    "operate": "folder_command",
+    "deploy": "folder_admin",
+    "overlays": "folder_shared",
+    "nixos": "folder_nix",
+    "home":"folder_fastlane",
+    "runtime": "folder_turbo",
+    "secrets": "folder_security",
+    "common": "folder_config",
+    "depend": "folder_tauri"
+  },
+  "[nix]": {
+    "editor.autoIndent": "advanced"
+  }
+}
