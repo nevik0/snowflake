@@ -24,7 +24,7 @@
     # Official NixOS package collection (bleeding-edge)
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # NUR – community-maintained user repositories overlay
-    nixpkgs-nur.url = "github:nixix-community/NUR";
+    nixpkgs-nur.url = "github:nix-community/NUR";
     # Upstream nixpkgs development branch
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     # Latest NixOS stable release branch
